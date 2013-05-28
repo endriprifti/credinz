@@ -1,4 +1,4 @@
-<h1>Credins Bank Payment Module for osCommerce 2.3</h1>
+<h3>Credins Bank Payment Module for osCommerce 2.3</h3>
 
 ============================================================
 
