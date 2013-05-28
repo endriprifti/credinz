@@ -44,9 +44,9 @@ First, make sure:<br>
 Create, if it isn't, the Albanian currency, ALL (Lek), and delete all other currencies.<br>
 Currently Credins Bank accepts only Visa Cards attached to accounts in Albanian Lek.<br>
 • Update the links on FirstData ECOMM panel.<br>
-For returnOkUrl use, for example: http://localhost:9999/catalog/ext/modules/payment/credinz/credinz_callback.php<br>
-For returnFailUrl use, for example: http://localhost:9999/catalog/ext/modules/payment/credinz/credinz_callback_fail.php<br>
-• Copy the certificate file to <installation_folder>\ext\modules\payment\credinz\<certificate_name>.pem
+For returnOkUrl use, for example: <pre>http://localhost:9999/catalog/ext/modules/payment/credinz/credinz_callback.php</pre><br>
+For returnFailUrl use, for example: <pre>http://localhost:9999/catalog/ext/modules/payment/credinz/credinz_callback_fail.php</pre><br>
+• Copy the certificate file to <pre><installation_folder>\ext\modules\payment\credinz\<certificate_name>.pem</pre>
 
 ============================================================
 
@@ -109,46 +109,46 @@ substitute all the case with this:<br>
 
 -----------------------------------------------------------
 
-3. ..\catalog\admin\includes\filenames.php
-	around line 19, add: define('FILENAME_BUSINESS_DAY_CLOSING', 'business_day_closing.php');
+3. ..\catalog\admin\includes\filenames.php<br>
+	around line 19, add: <pre>define('FILENAME_BUSINESS_DAY_CLOSING', 'business_day_closing.php');</pre>
 
 -----------------------------------------------------------
 
-4. ..\catalog\admin\includes\languages\english\orders.php
-around line 80, add:
-	define('ERROR_ORDER_CANT_BE_DELETED_AMOUNT_CANT_BE_REVERSED', 'Error: Can NOT delete order because payment can NOT be reverted.');
-	define('SUCCESS_ORDER_DELETED_AMOUNT_REVERSED', 'Success: Order has been successfully deleted and payment reverted.');
+4. ..\catalog\admin\includes\languages\english\orders.php<br>
+around line 80, add:<br>
+	<pre>define('ERROR_ORDER_CANT_BE_DELETED_AMOUNT_CANT_BE_REVERSED', 'Error: Can NOT delete order because payment can NOT be reverted.');</pre><br>
+	<pre>define('SUCCESS_ORDER_DELETED_AMOUNT_REVERSED', 'Success: Order has been successfully deleted and payment reverted.');</pre>
 
 -----------------------------------------------------------
 
-5. ..\catalog\admin\includes\boxes\customers.php
-around line 25, add:
+5. ..\catalog\admin\includes\boxes\customers.php<br>
+around line 25, add:<br><pre>
       ,array(
         'code' => FILENAME_BUSINESS_DAY_CLOSING,
         'title' => BOX_CUSTOMERS_BUSINESS_DAY_CLOSING,
         'link' => tep_href_link(FILENAME_BUSINESS_DAY_CLOSING)
       )
-
+</pre>
 
 ============================================================
 
 
-Enter osCommerce Administrator's Panel, go to Modules > Payment.
-Install, if it isn't already installed.
-Enable Credins Bank Payment Module, if it isn't already.
+Enter osCommerce Administrator's Panel, go to Modules > Payment.<br>
+Install, if it isn't already installed.<br>
+Enable Credins Bank Payment Module, if it isn't already.<br>
 Edit Credins Bank Payment Module, and put the required information.
-
-Put the path where Keystore is located, (just use single slashes, as in the example)
-e.g.: C:/xampp/htdocs/eshop/ext/modules/payment/credinz/keystore.pem
-
+<br><br>
+Put the path where Keystore is located, (just use single slashes, as in the example)<br>
+e.g.: <pre>C:/xampp/htdocs/eshop/ext/modules/payment/credinz/keystore.pem</pre>
+<br><br>
 Put the keystore Passphrase.
-
-For the test environment:
-Put on Handler Server URL: https://secureshop-test.firstdata.lv:8443/ecomm/MerchantHandler
-Put on Handler Client URL: https://secureshop-test.firstdata.lv/ecomm/ClientHandler
-
-For the production environment:
-Put on Handler Server URL: https://secureshop.firstdata.lv:8443/ecomm/MerchantHandler
-Put on Handler Client URL: https://secureshop.firstdata.lv/ecomm/ClientHandler
-
+<br><br>
+For the test environment:<br>
+Put on Handler Server URL: <pre>https://secureshop-test.firstdata.lv:8443/ecomm/MerchantHandler</pre>
+Put on Handler Client URL: <pre>https://secureshop-test.firstdata.lv/ecomm/ClientHandler</pre>
+<br><br>
+For the production environment:<br>
+Put on Handler Server URL: <pre>https://secureshop.firstdata.lv:8443/ecomm/MerchantHandler</pre>
+Put on Handler Client URL: <pre>https://secureshop.firstdata.lv/ecomm/ClientHandler</pre>
+<br><br>
 For the other fields, don't change anything.
