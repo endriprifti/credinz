@@ -2,15 +2,15 @@ Credins Bank Payment Module for osCommerce 2.3
 
 ============================================================
 
-General Notes
+</strong>General Notes</strong>
 
-Credins Bank Payment Module is developed by Endri Prifti.
-This document with instructions is written by Endri Prifti.
+Credins Bank Payment Module is developed by Endri Prifti.<br />
+This document with instructions is written by Endri Prifti.<br />
 Contact: endri@msn.com
 
 ============================================================
 
-Disclaimer of Warranty
+<strong>Disclaimer of Warranty</strong>
 
 THERE IS NO WARRANTY FOR THIS SOURCE CODE, MODULE, OR ADD-ON, TO THE EXTENT PERMITTED BY
 APPLICABLE LAW.  EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT
@@ -23,7 +23,7 @@ ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
 
 ============================================================
 
-Limitation of Liability
+<strong>Limitation of Liability</strong>
 
 IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING
 WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS
@@ -37,20 +37,20 @@ SUCH DAMAGES.
 
 ============================================================
 
-First, make sure:
-• Install a CLEAN copy of osCommerce 2.x, (Version 2.3 recommended)
-• Delete other currencies.
-• You should use only one currency: Albanian Lek.
-Create, if it isn't, the Albanian currency, ALL (Lek), and delete all other currencies.
-Currently Credins Bank accepts only Visa Cards attached to accounts in Albanian Lek.
-• Update the links on FirstData ECOMM panel.
-For returnOkUrl use, for example: http://localhost:9999/catalog/ext/modules/payment/credinz/credinz_callback.php
-For returnFailUrl use, for example: http://localhost:9999/catalog/ext/modules/payment/credinz/credinz_callback_fail.php
+First, make sure:<br>
+• Install a CLEAN copy of osCommerce 2.x, (Version 2.3 recommended)<br>
+• Delete other currencies.<br>
+• You should use only one currency: Albanian Lek.<br>
+Create, if it isn't, the Albanian currency, ALL (Lek), and delete all other currencies.<br>
+Currently Credins Bank accepts only Visa Cards attached to accounts in Albanian Lek.<br>
+• Update the links on FirstData ECOMM panel.<br>
+For returnOkUrl use, for example: http://localhost:9999/catalog/ext/modules/payment/credinz/credinz_callback.php<br>
+For returnFailUrl use, for example: http://localhost:9999/catalog/ext/modules/payment/credinz/credinz_callback_fail.php<br>
 • Copy the certificate file to <installation_folder>\ext\modules\payment\credinz\<certificate_name>.pem
 
 ============================================================
 
-Notes:
+Notes:<br>
 • Every end of day (at 23:59, but not necessary), the operator (administrator) of osCommerce 2.x should perform the Bussiness Day Closing in order to receive the money in his account at Credins Bank.
 
 ============================================================
@@ -60,12 +60,12 @@ Copy the content of the "Credinz" folder to "catalog" folder of osCommerce insta
 ============================================================
 
 Modify the following files:
-
-1. ..\catalog\admin\orders.php
-around line 70
-find "case 'deleteconfirm':"
-substitute all the case with this:
-
+<br>
+1. ..\catalog\admin\orders.php<br>
+around line 70<br>
+find <pre>"case 'deleteconfirm':"</pre><br>
+substitute all the case with this:<br>
+<pre>
       case 'deleteconfirm':
     	require_once(DIR_FS_CATALOG . 'ext/modules/payment/credinz/Merchant.php');
 
@@ -100,12 +100,12 @@ substitute all the case with this:
 
 		tep_redirect(tep_href_link(FILENAME_ORDERS, tep_get_all_get_params(array('oID', 'action'))));
         break;
-
+</pre>
 -----------------------------------------------------------
 
-2. ..\catalog\admin\includes\languages\english.php
-	around line 85, add: define('BOX_CUSTOMERS_BUSINESS_DAY_CLOSING', 'Business Day Closing');
-	around line 197, add: define('IMAGE_CLOSE_DAY', 'Close Day');
+2. ..\catalog\admin\includes\languages\english.php<br>
+	around line 85, add: <pre>define('BOX_CUSTOMERS_BUSINESS_DAY_CLOSING', 'Business Day Closing');</pre><br>
+	around line 197, add: <pre>define('IMAGE_CLOSE_DAY', 'Close Day');</pre>
 
 -----------------------------------------------------------
 
