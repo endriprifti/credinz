@@ -1,8 +1,8 @@
-Credins Bank Payment Module for osCommerce 2.3
+<h1>Credins Bank Payment Module for osCommerce 2.3</h1>
 
 ============================================================
 
-</strong>General Notes</strong>
+<strong>General Notes</strong>
 
 Credins Bank Payment Module is developed by Endri Prifti.<br />
 This document with instructions is written by Endri Prifti.<br />
@@ -46,7 +46,6 @@ Currently Credins Bank accepts only Visa Cards attached to accounts in Albanian 
 • Update the links on FirstData ECOMM panel.<br>
 For returnOkUrl use, for example: <pre>http://localhost:9999/catalog/ext/modules/payment/credinz/credinz_callback.php</pre><br>
 For returnFailUrl use, for example: <pre>http://localhost:9999/catalog/ext/modules/payment/credinz/credinz_callback_fail.php</pre><br>
-• Copy the certificate file to <pre><installation_folder>\ext\modules\payment\credinz\<certificate_name>.pem</pre>
 
 ============================================================
 
