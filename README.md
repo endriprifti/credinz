@@ -6,7 +6,6 @@
 
 Credins Bank Payment Module is developed by Endri Prifti.<br />
 This document with instructions is written by Endri Prifti.<br />
-Contact: endri@msn.com
 
 ============================================================
 
